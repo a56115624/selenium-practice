@@ -20,6 +20,7 @@ prices.append(driver.find_element_by_xpath('//*[@id="app"]/div[2]/div[4]/div[4]/
 for i in range(10000):
     actions = ActionChains(driver)
     actions.click(blow)
+    actions.perform()
     count = int(blow_count.text.replace("您目前擁有", "").replace("技術點", ""))
     for j in range(3):
         price = int(prices[j].text.replace("技術點", ""))
