@@ -1,14 +1,16 @@
 #搜索食譜
 
-from selenium.webdriver import Chrome
+from  selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 #引入我們載入的chromedriver
-driver = Chrome("./chromedriver.exe")
+PATH = "C:/Users/admin/Desktop/新增資料夾/chromedriver.exe"
+driver = webdriver.Chrome(PATH)
 driver.get("https://icook.tw/")
+
 search = driver.find_element_by_name("q")
 search.clear()
 search.send_keys("牛肉")
@@ -24,4 +26,4 @@ for title in titles:
 
 
 time.sleep(5)
-driver.quit()
+
