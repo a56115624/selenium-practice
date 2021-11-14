@@ -26,4 +26,4 @@ for title in titles:
 
 
 time.sleep(5)
-
+driver.close()
